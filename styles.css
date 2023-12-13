@@ -98,11 +98,17 @@ body{
 } 
 }
 }
+.navbar a:hover,
+.navbar a.active{
+  color: var(--main-color);
+}
 #menu-icon{
   font-size: 3.6rem;
   color:var(--text-color);
   cursor: pointer;
   display: none;
+  
+
 }
 section {
     min-height: 100vh;
@@ -112,6 +118,9 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
+    background: url('') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .home-content {
     max-width: 90rem;
@@ -278,12 +287,14 @@ svg {
     width: 45%;
     height: 100%;
     background: transparent;
+    transition: 3s;
+
     }
     .home-imgHover:hover {
       background: var(--bg-color);
       opacity: .8;
       }
-      .about
+  .about
       {
         display: flex;
         justify-content: center;
@@ -293,9 +304,73 @@ svg {
         background: var(--bg-color);
         padding-bottom: 6rem;
       }
-      .heading{
+ .heading{
         font-size: 5rem;
         margin-bottom:3rem ;
         text-align: center;
       }
+
+    span{
+      color: var(--main-color);
       
+    }
+  .about-img{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .about-img img{
+    width: 90%;
+    border-radius: 50%;
+    border: 1rem solid var(--main-color);
+  }  
+
+  .about-img .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+  }
+  .about-content{
+    text-align: center;
+
+  }
+  .about-content h3{
+    font-size: 2.6rem;
+  }
+  .about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 2rem;
+  }
+  .education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    min-height: auto;
+    padding-bottom: 5rem;
+
+ 
+  }
+  .education .education-row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .education-column .title{
+    font-size: 2rem;
+    margin: 0 0 1.5rem 2rem;
+  }
